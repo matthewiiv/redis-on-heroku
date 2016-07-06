@@ -1,7 +1,7 @@
 const fs = require('fs');
 const redis = require('redis');
+const server = require('server.js');
 
-var redis = require('redis');
 var client = redis.createClient(process.env.REDISCLOUD_URL, {no_ready_check: true});
 
 
