@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Redis on Heroku</title>
+      <link rel="stylesheet" href="style.css"/>
+    </head>
+		<body>
+        <div class="wrapper" id="resultsWrap">
+          <h1 id="title">SET</h1>
+          <select id='setField'>
+            <option value="key1">key1</option>
+            <option value="key2">key2</option>
+            <option value="key3">key3</option>
+            <option value="key4">key4</option>
+          </select><br><br>
+          <input type='text' id='setValue' list='results'><br><br>
+          <button type='button' id='set'>Submit</button>
+        </div>
+        <div class="wrapper" id="resultsWrap">
+          <h1 id="title">Your</h1>
+        </div>
+        <div class="wrapper" id="resultsWrap">
+          <h1 id="title">GET</h1>
+          <select id='getField'>
+            <option value="key1">key1</option>
+            <option value="key2">key2</option>
+            <option value="key3">key3</option>
+            <option value="key4">key4</option>
+          </select><br><br>
+          <button type='button' id='get'>Submit</button>
+        </div>
+        <script src="main.js"></script>
+        </body>
+</html>
