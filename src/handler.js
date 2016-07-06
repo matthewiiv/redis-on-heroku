@@ -27,6 +27,7 @@ const handler = (req, res) => {
         res.writeHead(200, {'Content-Type' : 'text/plain'});
         res.end('Added to database');
     } else if (url.includes('/get')) {
+        
         res.writeHead(200, {'Content-Type' : 'text/plain'});
         res.end('data from the server');
     } else {
