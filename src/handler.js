@@ -12,7 +12,7 @@ const handler = (req, res) => {
             res.writeHead(200, {'Content-Type' : 'text/html'});
             res.end(data);
         })
-    } else if (url.includes('./public')) {
+    } else if (url.includes('/public')) {
         const ext = url.split('.')[1];
         fs.readFile(__dirname + '/..' + url, (err, data) => {
             if(err) throw err;
