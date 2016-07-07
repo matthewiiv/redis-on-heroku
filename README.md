@@ -1,4 +1,7 @@
 
+# The main Repo
+Check out [our repo](https://github.com/matthewiiv/redis-on-heroku) and [demo website](https://heroku-redis-tutorial.herokuapp.com) to see redis deployed on Heroku.
+
 # Connections
 
 ## Connections
