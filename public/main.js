@@ -1,6 +1,6 @@
 'use strict';
 
-const SERVER_URL = 'http://basic-db-queries';
+const SERVER_URL = 'https://shrouded-river-76552.herokuapp.com/';
 
 const setButton = document.getElementById('set');
 const getButton = document.getElementById('get');
@@ -13,7 +13,7 @@ function sendSet(key, value, callback) {
 
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 400) {
-      if (typeof callback === 'function') callback(JSON.parse(xhr.responseText));
+      if (typeof callback === 'function') callback(xhr.responseText);
     }
   };
 
@@ -26,7 +26,7 @@ function sendGet(key, callback) {
 
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 400) {
-      if (typeof callback === 'function') callback(JSON.parse(xhr.responseText));
+      if (typeof callback === 'function') callback(xhr.responseText);
     }
   };
 
