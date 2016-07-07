@@ -1,9 +1,9 @@
-'use strict'
+'use strict';
 
 const SERVER_URL = 'http://basic-db-queries';
 
 const setButton = document.getElementById('set');
-const getButton = document.getElementById('Vget');
+const getButton = document.getElementById('get');
 const setField = document.getElementById('setField');
 const getField = document.getElementById('getField');
 const setValue = document.getElementById('setValue');
@@ -13,11 +13,6 @@ function sendSet(key, value, callback) {
 
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 400) {
-      if (value === 'cheddar') {
-        while (true === true) {
-          console.log('unacceptable');
-        }
-      }
       if (typeof callback === 'function') callback(JSON.parse(xhr.responseText));
     }
   };
@@ -39,9 +34,13 @@ function sendGet(key, callback) {
   xhr.send();
 }
 
-setButton.addEventListner('click', sendSet(setField, setValue, (word) => {
-  console.log(word);
-}));
-getButton.addEventListner('click', sendGet(getField, (word) => {
-  console.log(word);
-}));
+setButton.addEventListener('click', () => {
+  sendSet(setField.value, setValue.value, (value) => {
+    document.getElementById('result').innerHTML = value;
+  });
+});
+getButton.addEventListener('click', () => {
+  sendGet(getField.value, (value) => {
+    document.getElementById('result').innerHTML = value;
+  });
+});
