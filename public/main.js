@@ -1,6 +1,6 @@
 'use strict';
 
-const SERVER_URL = 'https://basic-db-queries';
+const SERVER_URL = 'https://shrouded-river-76552.herokuapp.com/';
 
 const setButton = document.getElementById('set');
 const getButton = document.getElementById('get');
