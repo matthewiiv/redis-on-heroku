@@ -19,14 +19,14 @@ const handler = (req, res) => {
             res.writeHead(200, {'Content-Type' : 'text/' + ext});
             res.end(data);
         });
-    } else if (url.includes('/?set')) {
+    } else if (url.includes('/set?')) {
         const all = url.split('=')[1];
         const key = all.split('&')[0];
         const param = all.split('&')[1];
         client.set(key, param);
         res.writeHead(200, {'Content-Type' : 'text/plain'});
         res.end('Added to database');
-    } else if (url.includes('/?get')) {
+    } else if (url.includes('/get?')) {
         const key1 = url.split('=')[1];
         client.get(key1, function(err, reply) {
         // reply is null when the key is missing
