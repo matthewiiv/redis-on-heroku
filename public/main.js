@@ -36,13 +36,11 @@ function sendGet(key, callback) {
 
 setButton.addEventListener('click', () => {
   sendSet(setField.value, setValue.value, (value) => {
-    // document.getElementById('result').innerHTML = value;
-    console.log(value);
+    document.getElementById('result').innerHTML = value;
   });
 });
 getButton.addEventListener('click', () => {
   sendGet(getField.value, (value) => {
-    // document.getElementById('result').innerHTML = value;
-    console.log(value);
+    document.getElementById('result').innerHTML = value;
   });
 });
